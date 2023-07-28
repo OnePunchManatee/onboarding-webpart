@@ -5,8 +5,8 @@
     "hello-world-web-part": {
       "components": [
         {
-          "entrypoint": "./lib/webparts/helloWorld/HelloWorldWebPart.js",
-          "manifest": "./src/webparts/helloWorld/HelloWorldWebPart.manifest.json"
+          "entrypoint": "./lib/webparts/helloWorld/OnboardingWebPart.js",
+          "manifest": "./src/webparts/helloWorld/OnboardingWebPart.manifest.json"
         }
       ]
     }
