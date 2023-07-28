@@ -36,7 +36,7 @@ export interface IOnboardingWebPartProps {
   
 
 /**
- * Themodify the HTMl in render() to change what gets displayed in the webpart (when added to the Sharepoint page)
+ * modify the HTMl in render() to change what gets displayed in the webpart (when added to the Sharepoint page)
  */
 export default class OnboardingWebPart extends BaseClientSideWebPart<IOnboardingWebPartProps> {
   /**
@@ -58,7 +58,7 @@ export default class OnboardingWebPart extends BaseClientSideWebPart<IOnboarding
     }
   });
   
-  const clickableImage1 = document.querySelector(`#${styles.circletoken1linkoverlay}`) as HTMLImageElement;
+  const clickableImage1 = document.querySelector(`#${styles.circletoken1videooverlay}`) as HTMLImageElement;
   const embeddedVideo1 = document.querySelector(`#${styles.embeddedvideo1}`) as HTMLIFrameElement;
   embeddedVideo1.style.display = 'none';
   // Add a click event listener to the image
@@ -102,10 +102,12 @@ export default class OnboardingWebPart extends BaseClientSideWebPart<IOnboarding
         
         <!-- Begin circle tokens -->
           <img class="${styles.circletokens}" id="${styles.circletoken0}" alt="Cybersecurity Training" src="${require('./assets/orientation.png')}"/>
-          
+
+          <!--the first token is the actual image, the second is invisible (0% opacity in CSS) and works with the TypeScript methods to toggle videos on and off-->
+
           <img class="${styles.circletokens}" id="${styles.circletoken1}" alt="Cybersecurity Training" src="${require('./assets/Cybersecurity.png')}"/>
           
-          <img class="${styles.circletokens}" id="${styles.circletoken1linkoverlay}" alt="Cybersecurity Training" src="${require('./assets/Cybersecurity.png')}"/>
+          <img class="${styles.circletokens}" id="${styles.circletoken1videooverlay}" alt="Cybersecurity Training" src="${require('./assets/Cybersecurity.png')}"/>
 
           <a href="https://apps.gov.powerapps.us/play/e/default-6d112df9-2351-429b-9160-c1a6e0a277ee/a/739c7295-0be1-424c-b1ca-21315796c1d9?tenantId=6d112df9-2351-429b-9160-c1a6e0a277ee&source=portal&screenColor=rgba%280%2c%2099%2c%20177%2c%201%29" title="I&T Directives" target="_blank">
           <img class="${styles.circletokens}" id="${styles.circletoken2}" alt="Cybersecurity Training" src="${require('./assets/Directives.png')}"/></a>

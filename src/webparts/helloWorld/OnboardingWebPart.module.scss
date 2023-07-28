@@ -63,9 +63,7 @@ body, html {
 //   height: auto;
 // }
 
-#circletoken1linkoverlay {
-  top: 41%;
-  left: 30%;
+#circletoken1videooverlay {
   opacity: 0%;
   z-index: 4;
 }
@@ -85,7 +83,7 @@ body, html {
   left: 15%;
 }
 
-#circletoken1 {
+#circletoken1, #circletoken1videooverlay {
   top: 41%;
   left: 30%;
 }
