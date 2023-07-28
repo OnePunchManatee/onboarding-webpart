@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "onboarding-visual-client-side-solution",
+    "id": "4ac8f0ce-13eb-49c4-a407-c11941c6df03",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.17.4"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "onboarding-visual"
+      },
+      "longDescription": {
+        "default": "onboarding-visual"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "onboarding-visual Feature",
+        "description": "The feature that activates elements of the onboarding-visual solution.",
+        "id": "726de101-68ae-4f29-a315-e0a832d27ee4",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/onboarding-visual.sppkg"
+  }
+}
