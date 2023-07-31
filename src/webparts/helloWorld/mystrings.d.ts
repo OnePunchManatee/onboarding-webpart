@@ -1,7 +1,8 @@
-declare interface IHelloWorldWebPartStrings {
+declare interface IOnboardingWebPartStrings {
   PropertyPaneDescription: string;
   BasicGroupName: string;
   DescriptionFieldLabel: string;
+  storageListLabel: string;
   AppLocalEnvironmentSharePoint: string;
   AppLocalEnvironmentTeams: string;
   AppLocalEnvironmentOffice: string;
@@ -12,7 +13,7 @@ declare interface IHelloWorldWebPartStrings {
   AppOutlookEnvironment: string;
 }
 
-declare module 'HelloWorldWebPartStrings' {
-  const strings: IHelloWorldWebPartStrings;
+declare module 'OnboardingWebPartStrings' {
+  const strings: IOnboardingWebPartStrings;
   export = strings;
 }
