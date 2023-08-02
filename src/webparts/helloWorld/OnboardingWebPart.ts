@@ -44,8 +44,34 @@ export default class OnboardingWebPart extends BaseClientSideWebPart<IOnboarding
    * then the corresponding iFrame is hidden/revealed. The "querySelector(`styles._____}~" part determines what corresponding HTML element (whatever has 
    * the ____ class/id applied) gets hidden/revealed
    */
+
+public imageListenerSetup(): void {
+  console.log("doing something");
+  const clickableImages = document.querySelectorAll(`.${styles.circletokens}`);
+  const specialCaseImageBottom = document.querySelector(`#${styles.circletoken1}`);
+  const specialCaseImageTop = document.querySelector(`#${styles.circletoken1videooverlay}`);
+  console.log(clickableImages);
+  clickableImages
+  clickableImages.forEach(image => {
+    if (image instanceof HTMLImageElement) {
+      image.addEventListener('click', () => {
+        if (specialCaseImageTop !== null && specialCaseImageBottom !== null && 
+          specialCaseImageBottom instanceof HTMLImageElement && specialCaseImageTop instanceof HTMLImageElement) {
+          if (specialCaseImageTop.id === image.id) {
+              specialCaseImageBottom.style.opacity = '0';
+          }
+        }
+        image.style.opacity = '0';
+      });
+    } else {
+      // wrong type
+    }
+    
+  });
+}
+
   public videoListenerSetup(): void {
-    const clickableImage = document.querySelector(`#${styles.circletoken0}`) as HTMLImageElement;
+    const clickableImage = document.querySelector(`#${styles.circletoken8}`) as HTMLImageElement;
     const embeddedVideo0 = document.querySelector(`#${styles.embeddedvideo0}`) as HTMLIFrameElement;
     embeddedVideo0.style.display = 'none';
     // Add a click event listener to the image
@@ -71,7 +97,7 @@ export default class OnboardingWebPart extends BaseClientSideWebPart<IOnboarding
     }
   });
 
-  const clickableImage2 = document.querySelector(`#${styles.circletoken8}`) as HTMLImageElement;
+  const clickableImage2 = document.querySelector(`#${styles.circletoken0}`) as HTMLImageElement;
   const embeddedVideo2 = document.querySelector(`#${styles.embeddedvideo2}`) as HTMLIFrameElement;
   embeddedVideo2.style.display = 'none';
   // Add a click event listener to the image
@@ -95,56 +121,81 @@ export default class OnboardingWebPart extends BaseClientSideWebPart<IOnboarding
   public render(): void {
     this.domElement.innerHTML = `
     <section class="${styles.onboarding} ${!!this.context.sdks.microsoftTeams ? styles.teams : ''}">
-      <div class="${styles.welcome}">
-      <div class="${styles.imagecontainer}">
-
-        <img id="${styles.circleimage}" alt="Uptown Circle" src="${require('./assets/gaming.jpg')}"/>
+    <div class="${styles.welcome}">
+    <div class="${styles.imagecontainer}">
+    
+    <img id="${styles.circleimage}" alt="Uptown Circle" src="${require('./assets/gaming.jpg')}"/>
+    
+    <!-- Begin green tokens -->
+    
+    <img class="${styles.circletokenscompleted}" id="${styles.circletoken0}" alt="intwanet" src="${require('./assets/intranetintro2.png')}"/>
+    
+    <img class="${styles.circletokenscompleted}" id="${styles.circletoken1}" alt="Cybersecurity Training" src="${require('./assets/cybersecurity2.png')}"/>
+    
+    <img class="${styles.circletokenscompleted}" id="${styles.circletoken1videooverlay}" alt="Cybersecurity Training" src="${require('./assets/cybersecurity2.png')}"/>
+        
+        <img class="${styles.circletokenscompleted}" id="${styles.circletoken2}" alt="Cybersecurity Training" src="${require('./assets/directives2.png')}"/>
+        
+        <img class="${styles.circletokenscompleted}" id="${styles.circletoken3}" alt="Cybersecurity Training" src="${require('./assets/helpdesk2.png')}"/>
+        
+        <img class="${styles.circletokenscompleted}" id="${styles.circletoken4}" alt="Cybersecurity Training" src="${require('./assets/office2.png')}"/>
+        
+        <img class="${styles.circletokenscompleted}" id="${styles.circletoken5}" alt="Cybersecurity Training" src="${require('./assets/executime2.png')}"/>
+        
+        <img class="${styles.circletokenscompleted}" id="${styles.circletoken6}" alt="Cybersecurity Training" src="${require('./assets/directory2.png')}"/>
+        
+        <img class="${styles.circletokenscompleted}" id="${styles.circletoken7}" alt="Cybersecurity Training" src="${require('./assets/landing2.png')}"/>
+        
+        <img class="${styles.circletokenscompleted}" id="${styles.circletoken8}" alt="Cybersecurity Training" src="${require('./assets/orientation2.png')}"/>
+        
+        <!-- End green tokens -->
         
         <!-- Begin circle tokens -->
-          <img class="${styles.circletokens}" id="${styles.circletoken0}" alt="Cybersecurity Training" src="${require('./assets/orientation.png')}"/>
-
-          <!--the first token is the actual image, the second is invisible (0% opacity in CSS) and works with the TypeScript methods to toggle videos on and off-->
-
-          <img class="${styles.circletokens}" id="${styles.circletoken1}" alt="Cybersecurity Training" src="${require('./assets/Cybersecurity.png')}"/>
-          
-          <img class="${styles.circletokens}" id="${styles.circletoken1videooverlay}" alt="Cybersecurity Training" src="${require('./assets/Cybersecurity.png')}"/>
-
-          <a href="https://apps.gov.powerapps.us/play/e/default-6d112df9-2351-429b-9160-c1a6e0a277ee/a/739c7295-0be1-424c-b1ca-21315796c1d9?tenantId=6d112df9-2351-429b-9160-c1a6e0a277ee&source=portal&screenColor=rgba%280%2c%2099%2c%20177%2c%201%29" title="I&T Directives" target="_blank">
-          <img class="${styles.circletokens}" id="${styles.circletoken2}" alt="Cybersecurity Training" src="${require('./assets/Directives.png')}"/></a>
         
-          <a href="https://servicedesk.normal.org:8080/HomePage.do?view_type=my_view" title="Help Desk" target="_blank">
-          <img class="${styles.circletokens}" id="${styles.circletoken3}" alt="Cybersecurity Training" src="${require('./assets/helpdesk.png')}"/></a>
+        <img class="${styles.circletokens}" id="${styles.circletoken0}" alt="intwanet" src="${require('./assets/intranet.png')}"/>
         
-          <a href="https://normalil.sharepoint.com/sites/InnovationandTechnologyDepartment2/SitePages/Microsoft-365.aspx" title="Office 365" target="_blank">
-          <img class="${styles.circletokens}" id="${styles.circletoken4}" alt="Cybersecurity Training" src="${require('./assets/office.png')}"/></a>
+        <!--the first token is the actual image, the second is invisible (0% opacity in CSS) and works with the TypeScript methods to toggle videos on and off-->
+        <img class="${styles.circletokens}" id="${styles.circletoken1}" alt="Cybersecurity Training" src="${require('./assets/Cybersecurity.png')}"/>
         
-          <a href="https://executime.normal.org:7120/ExecuTime/Index.do " title="Executime" target="_blank">
-          <img class="${styles.circletokens}" id="${styles.circletoken5}" alt="Cybersecurity Training" src="${require('./assets/Executime.png')}"/></a>
+        <img class="${styles.circletokens}" id="${styles.circletoken1videooverlay}" alt="Cybersecurity Training" src="${require('./assets/Cybersecurity.png')}"/>
         
-          <a href="https://apps.gov.powerapps.us/play/e/default-6d112df9-2351-429b-9160-c1a6e0a277ee/a/ea02cd68-8005-4f4b-b697-5005525ead6e?tenantId=6d112df9-2351-429b-9160-c1a6e0a277ee&source=portal&screenColor=rgba%2844%2c%20125%2c%20154%2c%201%29" title="Town Directory" target="_blank">
-          <img class="${styles.circletokens}" id="${styles.circletoken6}" alt="Cybersecurity Training" src="${require('./assets/Directory.png')}"/></a>
+        <a href="https://apps.gov.powerapps.us/play/e/default-6d112df9-2351-429b-9160-c1a6e0a277ee/a/739c7295-0be1-424c-b1ca-21315796c1d9?tenantId=6d112df9-2351-429b-9160-c1a6e0a277ee&source=portal&screenColor=rgba%280%2c%2099%2c%20177%2c%201%29" title="I&T Directives" target="_blank">
+        <img class="${styles.circletokens}" id="${styles.circletoken2}" alt="Cybersecurity Training" src="${require('./assets/Directives.png')}"/></a>
         
-          <a href="https://normalil.sharepoint.com/" title="The Landing" target="_blank">
-          <img class="${styles.circletokens}" id="${styles.circletoken7}" alt="Cybersecurity Training" src="${require('./assets/landing.png')}"/></a>
+        <a href="https://servicedesk.normal.org:8080/HomePage.do?view_type=my_view" title="Help Desk" target="_blank">
+        <img class="${styles.circletokens}" id="${styles.circletoken3}" alt="Cybersecurity Training" src="${require('./assets/helpdesk.png')}"/></a>
         
-          <img class="${styles.circletokens}" id="${styles.circletoken8}" alt="intwanet" src="${require('./assets/intranet.png')}"/>
+        <a href="https://normalil.sharepoint.com/sites/InnovationandTechnologyDepartment2/SitePages/Microsoft-365.aspx" title="Office 365" target="_blank">
+        <img class="${styles.circletokens}" id="${styles.circletoken4}" alt="Cybersecurity Training" src="${require('./assets/office.png')}"/></a>
         
-          <!-- End circle tokens -->
-
+        <a href="https://executime.normal.org:7120/ExecuTime/Index.do " title="Executime" target="_blank">
+        <img class="${styles.circletokens}" id="${styles.circletoken5}" alt="Cybersecurity Training" src="${require('./assets/Executime.png')}"/></a>
+        
+        <a href="https://apps.gov.powerapps.us/play/e/default-6d112df9-2351-429b-9160-c1a6e0a277ee/a/ea02cd68-8005-4f4b-b697-5005525ead6e?tenantId=6d112df9-2351-429b-9160-c1a6e0a277ee&source=portal&screenColor=rgba%2844%2c%20125%2c%20154%2c%201%29" title="Town Directory" target="_blank">
+        <img class="${styles.circletokens}" id="${styles.circletoken6}" alt="Cybersecurity Training" src="${require('./assets/Directory.png')}"/></a>
+        
+        <a href="https://normalil.sharepoint.com/" title="The Landing" target="_blank">
+        <img class="${styles.circletokens}" id="${styles.circletoken7}" alt="Cybersecurity Training" src="${require('./assets/landing.png')}"/></a>
+        
+        <img class="${styles.circletokens}" id="${styles.circletoken8}" alt="Cybersecurity Training" src="${require('./assets/orientation.png')}"/>
+        
+        <!-- End circle tokens -->
+        
         <img alt="tree" id="${styles.tree}" src="${require('./assets/tree.png')}">
 
-        <!--These three iframes load the videos for the three video nodes, which get toggled on and off in the javascript later-->
-        <iframe width="1280" height="720" id="${styles.embeddedvideo0}" src="https://web.microsoftstream.com/embed/video/790449df-776d-4b84-8df8-5750c1c4eabe?autoplay=true&showinfo=false" 
+        <!--These three iframes load the videos for the three video nodes, which get toggled on and off in the javascript separately-->
+        <iframe width="1280" height="720" id="${styles.embeddedvideo2}" src="https://web.microsoftstream.com/embed/video/7f37778e-bfb3-4707-959a-1769f6fc4bb9?autoplay=true&showinfo=false" 
         allowfullscreen>
         </iframe>
-
+        
         <iframe width="1280" height="720" id="${styles.embeddedvideo1}" src="https://web.microsoftstream.com/embed/video/45ddeae8-4f9b-4ab5-98bb-63182329bdb9?autoplay=true&showinfo=false" 
         allowfullscreen>
         </iframe>
 
-        <iframe width="1280" height="720" id="${styles.embeddedvideo2}" src="https://web.microsoftstream.com/embed/video/7f37778e-bfb3-4707-959a-1769f6fc4bb9?autoplay=true&showinfo=false" 
+        <iframe width="1280" height="720" id="${styles.embeddedvideo0}" src="https://web.microsoftstream.com/embed/video/790449df-776d-4b84-8df8-5750c1c4eabe?autoplay=true&showinfo=false" 
         allowfullscreen>
         </iframe>
+
       </div>
         <h2>Welcome, ${escape(this.context.pageContext.user.displayName)}!</h2>
         <div>From the Constitution Trail, follow the circle to arrive at Uptown Station!</div>
@@ -152,6 +203,7 @@ export default class OnboardingWebPart extends BaseClientSideWebPart<IOnboarding
     </section>
     `;
 
+    this.imageListenerSetup();
     this.videoListenerSetup();
  
 /*

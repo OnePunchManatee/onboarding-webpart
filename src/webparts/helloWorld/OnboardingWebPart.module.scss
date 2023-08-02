@@ -77,6 +77,16 @@ body, html {
   cursor: pointer;
 }
 
+.circletokenscompleted {
+  display: block;
+    z-index: 2;
+    /* Higher z-index */
+    position: absolute;
+    max-width: 6%;
+    height: auto;
+  cursor: not-allowed;
+}
+
 /* Custom positions for each circletoken */
 #circletoken0 {
   top: 37%; 
@@ -87,8 +97,6 @@ body, html {
   top: 41%;
   left: 30%;
 }
-
-
 
 #circletoken2 {
   top: 65%;
