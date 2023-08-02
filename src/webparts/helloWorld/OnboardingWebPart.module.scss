@@ -1,10 +1,11 @@
-@import '~office-ui-fabric-react/dist/sass/References.scss';
+@import "~office-ui-fabric-react/dist/sass/References.scss";
 
 .onboardingWebpart {
-    color: black;
+  color: black;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
 }
@@ -36,32 +37,31 @@ body, html {
   left: 24.1%;
 }
 
-#embeddedvideo0, #embeddedvideo1, #embeddedvideo2 {
+#startarrow {
+  display: block;
+  z-index: 3;
+  position: absolute;
+  max-width: 8%;
+  height: auto;
+  top: 34.5%;
+  left: 5.5%;
+  rotate: 9deg;
+}
+
+#embeddedvideo0,
+#embeddedvideo1,
+#embeddedvideo2 {
   display: block;
   border: none;
   z-index: 5;
   position: absolute;
   height: auto;
-    top: 29%;
-    left: 40%;
-    max-width: 36%;
-    max-height: 37%;
-    height: auto;
+  top: 29%;
+  left: 40%;
+  max-width: 36%;
+  max-height: 37%;
+  height: auto;
 }
-// #embeddedvideo0,
-// #embeddedvideo1,
-// #embeddedvideo2 {
-//   display: block;
-//   border: none;
-//   z-index: 5;
-//   position: absolute;
-//   height: auto;
-//   top: 32%;
-//   left: 43%;
-//   max-width: 30%;
-//   max-height: 34%;
-//   height: auto;
-// }
 
 #circletoken1videooverlay {
   opacity: 0%;
@@ -79,21 +79,23 @@ body, html {
 
 .circletokenscompleted {
   display: block;
-    z-index: 2;
-    /* Higher z-index */
-    position: absolute;
-    max-width: 6%;
-    height: auto;
+  z-index: 1;
+  /* Higher z-index */
+  position: absolute;
+  max-width: 6%;
+  height: auto;
   cursor: not-allowed;
 }
 
 /* Custom positions for each circletoken */
 #circletoken0 {
-  top: 37%; 
+  top: 37%;
   left: 15%;
 }
 
-#circletoken1, #circletoken1videooverlay {
+#circletoken1,
+#circletoken1videooverlay,
+#circletoken1green {
   top: 41%;
   left: 30%;
 }
@@ -128,13 +130,13 @@ body, html {
   left: 65%;
 }
 
-#circletoken8 {
+#circletoken8,
+#circletoken8green {
   top: 5%;
   left: 52%;
 }
 
-
-@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import "~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss";
 
 .onboarding {
   overflow: hidden;
@@ -159,12 +161,16 @@ body, html {
   a {
     text-decoration: none;
     color: "[theme:link, default:#03787c]";
-    color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
+    color: var(
+      --link
+    ); // note: CSS Custom Properties support is limited to modern browsers only
 
     &:hover {
       text-decoration: underline;
       color: "[theme:linkHovered, default: #014446]";
-      color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
+      color: var(
+        --linkHovered
+      ); // note: CSS Custom Properties support is limited to modern browsers only
     }
   }
 }

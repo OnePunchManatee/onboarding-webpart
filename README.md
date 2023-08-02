@@ -32,7 +32,7 @@ The final command allows for connection to the local testing server.
 
 3. To test the webpart locally, run `gulp serve` in a terminal.
 
-4. To export the webpart for production, run `gulp bundle --ship --production && gulp package-solution --ship --production`. This generates a `.sppkg` file in `/sharepoint/solution`. With admin access, enter the Sharepoint Admin Center and add the `.sppkg` file as an app under your organization.
+4. To export the webpart for production, run `gulp bundle --ship --production && gulp package-solution --ship --production`. This generates a `.sppkg` file in `/sharepoint/solution`. With admin access, enter the Sharepoint Admin Center and add the `.sppkg` file as an app under your organization. From there, the app can be used as a webpart in any Sharepoint page in the tenant.
 
 ## Project Structure
 
