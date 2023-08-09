@@ -149,9 +149,10 @@ export default class OnboardingWebPart extends BaseClientSideWebPart<IOnboarding
     }">
       <div class="${styles.welcome}">
       
-      </div>
+      <div>
         <h2>Welcome, ${escape(this.context.pageContext.user.displayName)}!</h2>
         <div>From the Constitution Trail, follow the circle to arrive at Uptown Station!</div>
+        <p></p>
       </div>
       
       <div class="${styles.imagecontainer}">
@@ -164,7 +165,7 @@ export default class OnboardingWebPart extends BaseClientSideWebPart<IOnboarding
       
         <img class="${styles.circletokenscompleted}" id="${
       styles.circletoken0
-    }" alt="intwanet" src="${require("./assets/intranetintro2.png")}"/>
+    }" alt="Intranet Intro" src="${require("./assets/intranetintro2.png")}"/>
         
         <img class="${styles.circletokenscompleted}" id="${
       styles.circletoken1green
@@ -172,31 +173,31 @@ export default class OnboardingWebPart extends BaseClientSideWebPart<IOnboarding
         
             <img class="${styles.circletokenscompleted}" id="${
       styles.circletoken2
-    }" alt="Cybersecurity Training" src="${require("./assets/directives2.png")}"/>
+    }" alt="I&T Directives" src="${require("./assets/directives2.png")}"/>
             
             <img class="${styles.circletokenscompleted}" id="${
       styles.circletoken3
-    }" alt="Cybersecurity Training" src="${require("./assets/helpdesk2.png")}"/>
+    }" alt="Service Desk" src="${require("./assets/service desk.png")}"/>
             
             <img class="${styles.circletokenscompleted}" id="${
       styles.circletoken4
-    }" alt="Cybersecurity Training" src="${require("./assets/office2.png")}"/>
+    }" alt="Office 365" src="${require("./assets/office2.png")}"/>
             
             <img class="${styles.circletokenscompleted}" id="${
       styles.circletoken5
-    }" alt="Cybersecurity Training" src="${require("./assets/executime2.png")}"/>
+    }" alt="Executime" src="${require("./assets/executime2.png")}"/>
             
             <img class="${styles.circletokenscompleted}" id="${
       styles.circletoken6
-    }" alt="Cybersecurity Training" src="${require("./assets/directory2.png")}"/>
+    }" alt="Town Directory" src="${require("./assets/directory2.png")}"/>
             
             <img class="${styles.circletokenscompleted}" id="${
       styles.circletoken7
-    }" alt="Cybersecurity Training" src="${require("./assets/landing2.png")}"/>
+    }" alt="The Landing" src="${require("./assets/landing2.png")}"/>
             
             <img class="${styles.circletokenscompleted}" id="${
       styles.circletoken8green
-    }" alt="Cybersecurity Training" src="${require("./assets/orientation2.png")}"/>
+    }" alt="Orientation / Overview" src="${require("./assets/orientation2.png")}"/>
         
       <!-- End green tokens -->
       
@@ -224,7 +225,7 @@ export default class OnboardingWebPart extends BaseClientSideWebPart<IOnboarding
         <a href="https://normalil.sharepoint.com/sites/InnovationandTechnologyDepartment2/SitePages/Help-Desk.aspx" title="Help Desk" target="_blank">
         <img class="${styles.circletokens}" id="${
       styles.circletoken3
-    }" alt="Cybersecurity Training" src="${require("./assets/helpdesk.png")}"/></a>
+    }" alt="Cybersecurity Training" src="${require("./assets/service desk smojus.png")}"/></a>
           
         <a href="https://normalil.sharepoint.com/sites/InnovationandTechnologyDepartment2/SitePages/Microsoft-365.aspx" title="Office 365" target="_blank">
         <img class="${styles.circletokens}" id="${
