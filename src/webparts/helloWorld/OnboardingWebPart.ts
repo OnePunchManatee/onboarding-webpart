@@ -177,7 +177,7 @@ export default class OnboardingWebPart extends BaseClientSideWebPart<IOnboarding
             
             <img class="${styles.circletokenscompleted}" id="${
       styles.circletoken3
-    }" alt="Service Desk" src="${require("./assets/service desk.png")}"/>
+    }" alt="Service Desk" src="${require("./assets/servicedesk.png")}"/>
             
             <img class="${styles.circletokenscompleted}" id="${
       styles.circletoken4
@@ -225,7 +225,7 @@ export default class OnboardingWebPart extends BaseClientSideWebPart<IOnboarding
         <a href="https://normalil.sharepoint.com/sites/InnovationandTechnologyDepartment2/SitePages/Help-Desk.aspx" title="Help Desk" target="_blank">
         <img class="${styles.circletokens}" id="${
       styles.circletoken3
-    }" alt="Cybersecurity Training" src="${require("./assets/service desk smojus.png")}"/></a>
+    }" alt="Cybersecurity Training" src="${require("./assets/servicedesk.png")}"/></a>
           
         <a href="https://normalil.sharepoint.com/sites/InnovationandTechnologyDepartment2/SitePages/Microsoft-365.aspx" title="Office 365" target="_blank">
         <img class="${styles.circletokens}" id="${
