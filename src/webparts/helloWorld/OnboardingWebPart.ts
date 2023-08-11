@@ -170,10 +170,6 @@ export default class OnboardingWebPart extends BaseClientSideWebPart<IOnboarding
         <img class="${styles.circletokenscompleted}" id="${
       styles.circletoken1green
     }" alt="Cybersecurity Training" src="${require("./assets/cybersecurity2.png")}"/>
-        
-            <img class="${styles.circletokenscompleted}" id="${
-      styles.circletoken2
-    }" alt="I&T Directives" src="${require("./assets/directives2.png")}"/>
             
             <img class="${styles.circletokenscompleted}" id="${
       styles.circletoken3
@@ -216,11 +212,6 @@ export default class OnboardingWebPart extends BaseClientSideWebPart<IOnboarding
           <img class="${styles.circletokens}" id="${
       styles.circletoken1videooverlay
     }" alt="Cybersecurity Training" src="${require("./assets/Cybersecurity.png")}"/></a>
-          
-        <a href="https://normalil.sharepoint.com/sites/InnovationandTechnologyDepartment2/SitePages/I&T-Directives.aspx" title="I&T Directives" target="_blank">
-        <img class="${styles.circletokens}" id="${
-      styles.circletoken2
-    }" alt="Cybersecurity Training" src="${require("./assets/Directives.png")}"/></a>
           
         <a href="https://normalil.sharepoint.com/sites/InnovationandTechnologyDepartment2/SitePages/Help-Desk.aspx" title="Help Desk" target="_blank">
         <img class="${styles.circletokens}" id="${
