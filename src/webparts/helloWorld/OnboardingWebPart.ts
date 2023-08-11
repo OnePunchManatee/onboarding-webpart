@@ -173,7 +173,7 @@ export default class OnboardingWebPart extends BaseClientSideWebPart<IOnboarding
             
             <img class="${styles.circletokenscompleted}" id="${
       styles.circletoken3
-    }" alt="Service Desk" src="${require("./assets/servicedesk.png")}"/>
+    }" alt="Service Desk" src="${require("./assets/servicedeskgreen.png")}"/>
             
             <img class="${styles.circletokenscompleted}" id="${
       styles.circletoken4
@@ -198,7 +198,7 @@ export default class OnboardingWebPart extends BaseClientSideWebPart<IOnboarding
       <!-- End green tokens -->
       
       <!-- Begin circle tokens -->
-        <a href="https://normalil.sharepoint.com/:u:/s/InnovationandTechnologyDepartment2/EYTyj_4-kPFKj7xxRWjkuSIBEeJ4rTMpbnh3bxeby7bbZQ?e=1gGQDL" title="Intranet Intro" target="_blank">
+        <a href="https://normalil.sharepoint.com/:u:/s/InnovationandTechnologyDepartment2/EYTyj_4-kPFKj7xxRWjkuSIBEeJ4rTMpbnh3bxeby7bbZQ?e=1gGQDL" title="Intranet Intro" data-interception="off" target="_blank">
         <img class="${styles.circletokens}" id="${
       styles.circletoken0
     }" alt="intwanet" src="${require("./assets/intranet.png")}"/></a>
@@ -208,17 +208,17 @@ export default class OnboardingWebPart extends BaseClientSideWebPart<IOnboarding
       styles.circletoken1
     }" alt="Cybersecurity Training" src="${require("./assets/Cybersecurity.png")}"/>
           
-        <a href="https://normalil.sharepoint.com/:u:/s/InnovationandTechnologyDepartment2/ER4xPStMEdRMvEpmOgQy5_IBL-ZZ3S2okeRfWMtzJOOCHw?e=aOmaDn" title="I&T Directives" target="_blank">
+        <a href="https://normalil.sharepoint.com/:u:/s/InnovationandTechnologyDepartment2/ER4xPStMEdRMvEpmOgQy5_IBL-ZZ3S2okeRfWMtzJOOCHw?e=aOmaDn" title="I&T Directives" data-interception="off" target="_blank">
           <img class="${styles.circletokens}" id="${
       styles.circletoken1videooverlay
     }" alt="Cybersecurity Training" src="${require("./assets/Cybersecurity.png")}"/></a>
           
-        <a href="https://normalil.sharepoint.com/sites/InnovationandTechnologyDepartment2/SitePages/Help-Desk.aspx" title="Help Desk" target="_blank">
+        <a href="https://normalil.sharepoint.com/sites/InnovationandTechnologyDepartment2/SitePages/Help-Desk.aspx" data-interception="off" title="Service Desk" target="_blank">
         <img class="${styles.circletokens}" id="${
       styles.circletoken3
     }" alt="Cybersecurity Training" src="${require("./assets/servicedesk.png")}"/></a>
           
-        <a href="https://normalil.sharepoint.com/sites/InnovationandTechnologyDepartment2/SitePages/Microsoft-365.aspx" title="Office 365" target="_blank">
+        <a href="https://normalil.sharepoint.com/sites/InnovationandTechnologyDepartment2/SitePages/Microsoft-365.aspx" data-interception="off" title="Office 365" target="_blank">
         <img class="${styles.circletokens}" id="${
       styles.circletoken4
     }" alt="Cybersecurity Training" src="${require("./assets/office.png")}"/></a>
@@ -228,12 +228,12 @@ export default class OnboardingWebPart extends BaseClientSideWebPart<IOnboarding
       styles.circletoken5
     }" alt="Cybersecurity Training" src="${require("./assets/Executime.png")}"/></a>
           
-        <a href="https://apps.gov.powerapps.us/play/e/default-6d112df9-2351-429b-9160-c1a6e0a277ee/a/ea02cd68-8005-4f4b-b697-5005525ead6e" title="Town Directory" target="_blank">
+        <a href="https://apps.gov.powerapps.us/play/e/default-6d112df9-2351-429b-9160-c1a6e0a277ee/a/ea02cd68-8005-4f4b-b697-5005525ead6e" data-interception="off" title="Town Directory" target="_blank">
         <img class="${styles.circletokens}" id="${
       styles.circletoken6
     }" alt="Cybersecurity Training" src="${require("./assets/Directory.png")}"/></a>
           
-        <a href="https://normalil.sharepoint.com/" title="The Landing" target="_blank">
+        <a href="https://normalil.sharepoint.com/" data-interception="off" title="The Landing" target="_blank">
         <img class="${styles.circletokens}" id="${
       styles.circletoken7
     }" alt="Cybersecurity Training" src="${require("./assets/landing.png")}"/></a>
