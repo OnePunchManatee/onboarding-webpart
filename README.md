@@ -36,7 +36,7 @@ The final command allows for connection to the local testing server.
 
 ## Project Structure
 
-In `/src/webparts/helloWorld`:
+In `/src/webparts/onboardingWebpart`:
 
 - `OnboardingWebPart.ts` contains the typescript and HTML needed to run the webpart. The `innerHTML` object in `render()` contains the HTML, which is dependent on the scss doc for styling.
 
